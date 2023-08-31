@@ -1,2 +1,5 @@
 .vscode
 .git
+
+# Cython
+.pyc
