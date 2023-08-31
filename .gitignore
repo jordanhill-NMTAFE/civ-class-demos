@@ -1,1 +1,9 @@
 .idea/
+venv
+
+# If you forget to add this first do this:
+# git rm --cache -r .idea
+# git rm --cache -r venv
+# git status
+
+
