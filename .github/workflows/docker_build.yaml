@@ -26,7 +26,7 @@ jobs:
           ls -l 
           echo 
           docker build . -t civ-class-demos:latest
-          docker push civ-class-demos
+          docker push jordanhillnmtafe/civ-class-demos
           
           echo "The image has been pushed!"
 
