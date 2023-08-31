@@ -22,11 +22,13 @@ jobs:
 
 
       - shell: bash
+        env:
+          USERNAME:  ${{ secrets.DOCKERHUB_USERNAME }}
         run: |
           ls -l 
           echo 
-          docker build . -t civ-class-demos:latest
-          docker push jordanhillnmtafe/civ-class-demos
+          docker build . -t $"USERNAME"/civ-class-demos:latest
+          docker push $"USERNAME"/civ-class-demos
           
           echo "The image has been pushed!"
 
