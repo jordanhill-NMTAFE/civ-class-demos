@@ -1,0 +1,26 @@
+name: Build Docker
+
+on:
+  push:
+    branches:
+      - "main"
+
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Login to Dockerhub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - shell: bash
+        run: | 
+          docker build . -t civ-class-demos:latest
+          docker push civ-class-demos
+          
+          echo "The image has been pushed!"
+
+
