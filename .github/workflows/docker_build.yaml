@@ -26,7 +26,6 @@ jobs:
           USERNAME:  ${{ secrets.DOCKERHUB_USERNAME }}
         run: |
           ls -l 
-          echo 
           docker build . -t $USERNAME/civ-class-demos:latest
           docker push $USERNAME/civ-class-demos -a
           
