@@ -1,9 +1,13 @@
 .idea/
 venv
+.vs*
+__py*
+.DS*
 
-# If you forget to add this first do this:
+# If you forget to add this first, do this:
 # git rm --cache -r .idea
 # git rm --cache -r venv
+# git rm --cache -r <Any other files or folders you don't want>
 # git status
 
 
